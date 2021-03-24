@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+while ((getchar()) != '\n');
+
+	int ph[12]
+	int i = 0;
+	int dash = 0;
+	int One = 0;
+	printf("Phone number: \n");
+	//scanf_s("Enter ID: %c", &ID);
+	fgets(ph, sizeof ph, stdin);
+
+	while (ph[i] != '\0')
+	{
+
+		if (ph[i] == '-')
+		{
+			dash++;
+
+		}
+
+		i++;
+
+
+	}
+
+	if (dash == 2)
+	{
+		//printf("The number of dashes: %d \n", dash);
+		printf("The Phone Number Entered: %s \n", ph);
+
+
+		return ph;
+	}
+	else
+	{
+		printf("Inviaid input.");
+		return 0;
+	}
+
+
+	return ph;
+	// Phone number must be an 12-character string, of the form
+	// xxx-xxx-xxxx
+	// where x is a digit 0 - 9, and the - is a literal.
+}
